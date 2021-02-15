@@ -5,11 +5,10 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.Condition.text;
-import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 
 
-public class SimleTest {
+public class FirstPureSelenide {
     @BeforeAll
     static void setup() {
         Configuration.startMaximized = true;
@@ -25,4 +24,4 @@ public class SimleTest {
         $("#issue_1183_link").shouldHave(text("Attach external html file to the test run"));
 
 
-}}
+    }}
