@@ -13,6 +13,8 @@ import static io.qameta.allure.Allure.step;
 
 public class SecondLambdaStep {
 
+    String issueName = "Attach external html file to the test run";
+
     @BeforeAll
     static void setup() {
         Configuration.startMaximized = true;
@@ -33,7 +35,7 @@ public class SecondLambdaStep {
             $("[data-tab-item=i1issues-tab]").click();
         });
         step("Проверка issue с названием Attach external html file to the test run ", () -> {
-            $("#issue_1183_link").shouldHave(text("Attach external html file to the test run"));
+            $("#issue_1183_link").shouldHave(text(issueName));
         });
 
     }

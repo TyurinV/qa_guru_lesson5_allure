@@ -9,10 +9,14 @@ import static com.codeborne.selenide.Selenide.*;
 
 
 public class FirstPureSelenide {
+
+    String issueName = "Attach external html file to the test run";
+
     @BeforeAll
     static void setup() {
         Configuration.startMaximized = true;
     }
+
     @Test
     void shouldHaveIssueInGithub() {
         //Открыть страницу Github
@@ -21,7 +25,7 @@ public class FirstPureSelenide {
         $("[name=q]").setValue("allure").pressEnter();
         $(".repo-list li a").click();
         $("[data-tab-item=i1issues-tab]").click();
-        $("#issue_1183_link").shouldHave(text("Attach external html file to the test run"));
+        $("#issue_1183_link").shouldHave(text(issueName));
 
 
     }}

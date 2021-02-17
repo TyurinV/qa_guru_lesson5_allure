@@ -8,6 +8,8 @@ import static com.codeborne.selenide.Selenide.open;
 
 public class BaseSteps {
 
+    String issueName = "Attach external html file to the test run";
+
     @Step("Открываем главную страницу")
     public void openMainPage() {
         open("https://github.com/");
@@ -23,7 +25,7 @@ public class BaseSteps {
     }
     @Step ("Проврка issue \"Attach external html file to the test run\"")
     public void issueCheck(){
-        $("#issue_1183_link").shouldHave(text("Attach external html file to the test run"));
+        $("#issue_1183_link").shouldHave(text(issueName));
     }
 
 }
