@@ -8,8 +8,6 @@ import static com.codeborne.selenide.Selenide.open;
 
 public class BaseSteps {
 
-    String issueName = "Attach external html file to the test run";
-
     @Step("Открываем главную страницу")
     public void openMainPage() {
         open("https://github.com/");
@@ -23,8 +21,8 @@ public class BaseSteps {
         $(".repo-list li a").click();
         $("[data-tab-item=i1issues-tab]").click();
     }
-    @Step ("Проврка issue \"Attach external html file to the test run\"")
-    public void issueCheck(){
+    @Step ("Issue с текстом \"{issueName}\" присутствует на странице")
+    public void issueCheck(final String issueName){
         $("#issue_1183_link").shouldHave(text(issueName));
     }
 

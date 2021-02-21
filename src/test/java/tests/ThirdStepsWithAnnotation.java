@@ -14,6 +14,6 @@ public class ThirdStepsWithAnnotation {
             steps.openMainPage();
             steps.allureSearch();
             steps.issueSection();
-            steps.issueCheck();
+            steps.issueCheck("Attach external html file to the test run");
         }
 }
